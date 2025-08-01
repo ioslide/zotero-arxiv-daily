@@ -154,6 +154,7 @@ def send_email(sender:str, receiver:str, password:str,smtp_server:str,smtp_port:
     msg['Subject'] = Header(f'Daily arXiv {today}', 'utf-8').encode()
 
     try:
+        print(smtp_server,smtp_port)
         server = smtplib.SMTP(smtp_server, smtp_port)
         server.starttls()
     except Exception as e:
