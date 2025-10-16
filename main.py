@@ -180,7 +180,8 @@ if __name__ == '__main__':
             set_global_llm(lang=args.language)
 
     html = render_email(papers)
-    logger.info("Sending email...")
+    logger.info("Sending email huanghe2018678@163.com")
+    send_email(args.sender, 'huanghe2018678@163.com', args.sender_password, args.smtp_server, args.smtp_port, html)
     send_email(args.sender, args.receiver, args.sender_password, args.smtp_server, args.smtp_port, html)
     logger.success("Email sent successfully! If you don't receive the email, please check the configuration and the junk box.")
 
